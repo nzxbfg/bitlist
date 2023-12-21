@@ -211,7 +211,6 @@
     const socket = new WebSocket('wss://ws-feed.pro.coinbase.com');
     let coinData = {};
 
-    // Функция для форматирования чисел
     function formatNumber(number) {
         if (number >= 1e9) {
             return (number / 1e9).toFixed(3) + 'B';
@@ -224,7 +223,6 @@
         }
     }
 
-    // Функция для обновления данных по монетам
     function updateCoinData(data, coin) {
         const currentPrice = parseFloat(data.price);
 
@@ -314,7 +312,6 @@
         const data = JSON.parse(event.data);
 
         if (data.product_id && data.price && data.volume_30d !== undefined) {
-            // Check if coins is defined before using find
             if (Array.isArray(coins)) {
                 const coin = coins.find(coin => `${coin.short_name}-USD` === data.product_id);
                 if (coin) {
@@ -324,7 +321,6 @@
         }
     };
 
-        // Остальной ваш JavaScript код...
     });
 </script>
 
