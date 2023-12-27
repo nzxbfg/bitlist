@@ -6,7 +6,7 @@
 
 3. Для добавления новой монеты надо указать точное имя short_name (данные подгружаются через веб-сокет 'wss://ws-feed.pro.coinbase.com')
 
-###
+==========================================
 
 1. The database is located in the /admin folder (connect in /functions/connect.php)
 
